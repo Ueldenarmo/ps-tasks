@@ -5,6 +5,26 @@
   --text-color: #fafafa;
 }
 
-.main {
+main {
   background-color: var(--background-color);
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--input-back-color);
+  color: var(--text-color);
+}
+
+label {
+  color: var(--label-text-color);
+}
+
+button {
+  background-color: #6c38cc;
+  color: var(--text-color);
 }

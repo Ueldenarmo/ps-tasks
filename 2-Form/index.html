@@ -4,45 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
       <section class="register-form">
         <div class="register-form__header">
-          <h1>Регистрация</h1>
-          <p>
-            Уже есть аккаунт? <span><a href="#">Войти</a></span>
+          <h1 class="register-form__title">Регистрация</h1>
+          <p class="register-form__subtitle">
+            Уже есть аккаунт? <span class="register-form__login-link"></span>><a href="#">Войти</a></span>
           </p>
         </div>
-        <form action="#">
-          <div>
+        <form action="#" class="register-form__form">
+          <div class="register-form__field">
             <input
               type="text"
               id="company-name"
               name="company-name"
               placeholder="Моя компания"
+              class="register-form__input"
             />
           </div>
-          <div>
-            <input type="text" id="name" name="name" placeholder="Имя" />
+          <div class="register-form__field register-form__field--row">
+            <input type="text" id="name" name="name" placeholder="Имя" class="register-form__input"/>
             <input
               type="text"
               id="last-name"
               name="last-name"
               placeholder="Фамилия"
+              class="register-form__input"
             />
           </div>
-          <div>
-            <input type="email" id="email" name="email" placeholder="E-mail" />
+          <div class="register-form__field">
+            <input type="email" id="email" name="email" placeholder="E-mail" class="register-form__input"/>
           </div>
-          <div>
-            <button type="submit">Зарегистироваться &#8594;</button>
+          <div class="register-form__actions">
+            <button type="submit" class="register-form__submit">Зарегистироваться &#8594;</button>
           </div>
-          <div>
-            <input type="checkbox" id="agree" />
-            <label for="agree"
+          <div class="register-form__agreement">
+            <input type="checkbox" id="agree" class="register-form__checkbox"/>
+            <label for="agree" class="register-form__label"
               >Я прочитал(а) и принимаю
-              <span><a href="#">Условия пользования</a></span></label
+              <span class="register-form__terms-link"><a href="#">Условия пользования</a></span></label
             >
           </div>
         </form>

@@ -1,3 +1,18 @@
 .register-form {
   background-color: #fffefe;
+  font-family: "Open Sans", sans-serif;
+}
+
+.register-form__title {
+  font-size: 36px;
+  color: #333333;
+}
+
+.register-form__subtitle {
+  font-size: 18px;
+  color: #666666;
+}
+
+.register-form__login-link a {
+  color: #089fe0;
 }

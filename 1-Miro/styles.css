@@ -1,12 +1,72 @@
+:root {
+  --link-color: #4262ff;
+  --text-color: #050038;
+  --text-color-light: rgba(5, 0, 56, 0.6);
+  --text-white: #ffffff;
+}
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+a {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.navHead {
+  list-style: none;
+}
+
+.navHeadList {
+  color: var(--text-color);
+}
+
+.bigHeader {
+  color: var(--text-color);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 1px;
+}
+
+.headerSubtitle {
+  color: var(--text-color);
 }
 
 #heroButton {
-  background-color: #4262ff;
+  background-color: var(--link-color);
   color: #ffffff;
 }
 
+.description {
+  color: var(--text-color-light);
+}
+
 .bodyLink {
-  color: #4262ff;
+  color: var(--link-color);
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.author {
+  color: var(--text-white);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footerLink {
+  color: var(--text-white);
+}
+
+.footerWrapper {
+  background-color: var(--text-color);
 }

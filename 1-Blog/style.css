@@ -6,7 +6,7 @@
 }
 
 html {
-  background: linear-gradient(#374151, #111827);
+  background: linear-gradient(180deg, #374151 0%, #111827 100%);
 }
 
 .navMenu {
@@ -16,4 +16,61 @@ html {
 
 .navMenuLink {
   text-decoration: none;
+}
+
+.searchInput {
+  background-color: rgba(31, 41, 55, 0.6);
+}
+
+.searchInput::placeholder {
+  color: #ffffff;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.category {
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.lightText {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.articleName {
+  font-size: 24px;
+  line-height: 158%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.authorName {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: #ffffff;
+}
+
+.firstText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #ffffff;
+}
+
+.plainText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%;
+  color: #ffffff;
+}
+
+.authorRight {
+  color: #ffffff;
+  font-size: 16px;
+  opacity: 0.6;
+  line-height: 175%;
+  text-align: center;
 }

@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+html {
+  background: linear-gradient(#374151, #111827);
+}
+
+.navMenu {
+  list-style: none;
+  font-size: 16px;
+}
+
+.navMenuLink {
+  text-decoration: none;
+}

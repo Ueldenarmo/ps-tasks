@@ -7,31 +7,43 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#">Мой блог</a></li>
-          <li><a href="#">HTML и CSS</a></li>
-          <li><a href="#">Frontend</a></li>
-          <li><a href="#">Backend</a></li>
+      <nav class="nav">
+        <ul class="navMenu">
+          <li><a href="#" class="navMenuLink">Мой блог</a></li>
+          <li><a href="#" class="navMenuLink">HTML и CSS</a></li>
+          <li><a href="#" class="navMenuLink">Frontend</a></li>
+          <li><a href="#" class="navMenuLink">Backend</a></li>
         </ul>
       </nav>
-      <form>
-        <input type="text" placeholder="Поиск" />
+      <form class="search">
+        <input
+          type="text"
+          placeholder="Поиск"
+          name="search"
+          class="searchInput"
+        />
       </form>
     </header>
     <main>
-      <section>
+      <section class="headSection">
         <span class="category">FRONTEND</span>
-        <time datetime="2024-05-12">12 мая 2024</time>
-        <h1>Теория цвета - Как цвет влияет на поведение потребителей</h1>
-        <img src="Ellipse 1.png" alt="Фото девушки автора статьи" />
-        <p class="author-name">Наталья Васильева</p>
-        <p class="author-position">Разработчик</p>
+        <time datetime="2024-05-12" class="lightText">12 мая 2024</time>
+        <h1 class="articleName">
+          Теория цвета - Как цвет влияет на поведение потребителей
+        </h1>
+        <img
+          src="/1-Blog/assets/Ellipse 1.png"
+          alt="Фото девушки автора статьи"
+          class="authorPhoto"
+        />
+        <p class="authorName">Наталья Васильева</p>
+        <p class="lightText">Разработчик</p>
       </section>
       <section>
-        <img src="Rectangle 181.png" alt="Компьютер мак" />
-        <article>
-          <p>
+        <img src="/1-Blog/assets/Rectangle 181.png" alt="Компьютер мак" /
+        class="macPhoto">
+        <article class="article">
+          <p class="plainText">
             Теория цвета — это особенности эмоционального восприятия человеком
             тех или иных цветовых решений. Цвета и различные их комбинации
             влияют на психику человека, а значит, во многом определяют его
@@ -41,14 +53,14 @@
             продукту, подтолкнуть посетителей к совершению целевых действий,
             повысить конверсию.
           </p>
-          <p>
+          <p class="plainText">
             Универсального ответа на вопрос, как тот или иной цвет влияет на
             разных людей, нет. Эмоциональная и поведенческая реакция каждого
             человека зависит от личного опыта. Вместе с тем можно выделить
             определенные закономерности влияния цветов на поведение
             пользователей.
           </p>
-          <p>
+          <p class="plainText">
             В исследовании «Влияние цвета на маркетинг» (Impact of color on
             marketing) говорится, что использование разных цветов может
             существенно влиять на настроение и поведение потребителей.
@@ -60,7 +72,7 @@
       </section>
     </main>
     <footer>
-      <section>Все права защищены © 2024</section>
+      <section class="authorRight">Все права защищены © 2024</section>
     </footer>
   </body>
 </html>

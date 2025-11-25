@@ -4,9 +4,33 @@
   --text-color-light: rgba(5, 0, 56, 0.6);
   --text-white: #ffffff;
 }
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  padding: 33px 50px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 60px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 17px 0;
+}
+
+h2 {
+  margin: 0 0 19px 0;
 }
 
 p {
@@ -39,15 +63,36 @@ a {
 
 .headerSubtitle {
   color: var(--text-color);
+  margin: 0 0 55px 0;
+}
+
+.heroForm input {
+  border-radius: 32px;
+  border: 1px solid #9b99af;
+  height: 48px;
 }
 
 #heroButton {
   background-color: var(--link-color);
   color: #ffffff;
+  border-radius: 32px;
+  border: none;
+  height: 48px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 10px 20px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-color);
+  margin: 8px 0 52px 0;
 }
 
 .description {
   color: var(--text-color-light);
+  margin: 0 0 40px 0;
 }
 
 .bodyLink {
@@ -55,6 +100,11 @@ a {
   font-size: 18px;
   line-height: 24px;
   text-decoration: underline;
+}
+
+.footerWrapper {
+  background-color: var(--text-color);
+  padding: 47px 40px;
 }
 
 .author {
@@ -65,10 +115,6 @@ a {
 
 .footerLink {
   color: var(--text-white);
-}
-
-.footerWrapper {
-  background-color: var(--text-color);
 }
 
 .listDesign {

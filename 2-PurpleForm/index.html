@@ -10,9 +10,11 @@
     <main>
       <h1>Свяжитесь со мной</h1>
       <form action="#" method="get">
-        <div>
+        <div class="wholeField">
+          <img src="assets/message.svg" alt="Иконка сообщения" />
           <label for="email">E-mail<sup>*</sup></label>
           <input
+            class="psInput"
             type="email"
             id="email"
             name="email"
@@ -20,23 +22,26 @@
             required
           />
         </div>
-        <div>
+        <div class="wholeField">
+          <img src="assets/telegram.svg" alt="Иконка Telegram" />
           <label for="tgm">Telegram</label>
           <input
+            class="psInput"
             type="text"
             id="tgm"
             name="telegram-link"
             placeholder="Введите Telegram"
           />
         </div>
-        <div>
+        <div class="wholeField">
+          <img src="assets/topic.svg" alt="Иконка topic" />
           <label for="theme">Тема<sup>*</sup></label>
-          <select name="theme" id="theme" required>
+          <select name="theme" id="theme" required class="psInput">
             <option value="courses">Приобретение курсов</option>
             <option value="feedback">Обратная связь</option>
           </select>
         </div>
-        <div>
+        <div class="wholeField">
           <label for="comment">Комментарий</label>
           <textarea
             id="comment"

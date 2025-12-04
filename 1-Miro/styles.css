@@ -15,10 +15,15 @@ body {
   max-width: 1200px;
 }
 
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 nav {
   padding: 33px 50px;
   border-bottom: 1px solid #f0f0f0;
-  margin-bottom: 60px;
+  max-width: 1200px;
 }
 
 nav ul {
@@ -64,7 +69,7 @@ a {
 
 .sectionPlaceWrapper {
   display: flex;
-  margin: 0 50px 0 40px;
+  margin: 60px 50px 210px 40px;
 }
 
 .placeLeft {
@@ -117,9 +122,15 @@ a {
   margin: 8px 0 52px 0;
 }
 
-/*.placeRight img {
-  width: 604px;
-}*/
+.placeUsers {
+  display: flex;
+  gap: 20px;
+}
+
+.usersCount {
+  width: 190px;
+  color: var(--text-color);
+}
 
 .description {
   color: var(--text-color-light);

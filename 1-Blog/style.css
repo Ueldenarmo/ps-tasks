@@ -5,16 +5,42 @@
   color: #ffffff;
 }
 
-html {
-  background: linear-gradient(180deg, #374151 0%, #111827 100%);
-}
-
 body {
   margin: 0;
+  background: linear-gradient(180deg, #374151 0%, #111827 100%);
+  background-repeat: no-repeat;
+  min-width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
 }
 
 header {
   margin: 70px 0 69px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.letterB {
+  border-radius: 3px;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+  background: #4b5563;
+  text-align: center;
+  font-size: 18px;
 }
 
 .navMenu {

@@ -9,31 +9,43 @@
   <body>
     <header>
       <nav>
-        <ul class="navHead">
-          <li><a href="#" class="navHeadList">Продукт</a></li>
-          <li><a href="#" class="navHeadList">Решения</a></li>
-          <li><a href="#" class="navHeadList">Ресурсы</a></li>
-          <li><a href="#" class="navHeadList">Предприятия</a></li>
-          <li><a href="#" class="navHeadList">Тарифы</a></li>
-        </ul>
+        <div class="navWrapper">
+          <ul class="navHead">
+            <li><a href="#" class="navHeadList">Продукт</a></li>
+            <li><a href="#" class="navHeadList">Решения</a></li>
+            <li><a href="#" class="navHeadList">Ресурсы</a></li>
+            <li><a href="#" class="navHeadList">Предприятия</a></li>
+            <li><a href="#" class="navHeadList">Тарифы</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
-      <section>
-        <h1 class="bigHeader">Место для командной работы</h1>
-        <p class="headerSubtitle">
-          Интерактивная онлайн-доска для совместной работы команд — в любое
-          время, в любом месте.
-        </p>
-        <form action="/register" method="get" class="heroForm">
-          <input type="email" name="email" id="email" />
-          <button id="heroButton">Начать бесплатно</button>
-        </form>
-        <p class="formSubtitle">Всегда бесплатно — кредитная карта не нужна</p>
-        <img
-          src="assets/headerimage-without-text 1.png"
-          alt="Представление доски Миро и пользователи"
-        />
+      <section class="placeWrapper">
+        <div class="sectionPlaceWrapper">
+          <div class="placeLeft">
+            <h1 class="bigHeader">Место для командной работы</h1>
+            <p class="headerSubtitle">
+              Интерактивная онлайн-доска для совместной работы команд — в любое
+              время, в любом месте.
+            </p>
+
+            <form action="/register" method="get" class="heroForm">
+              <input type="email" name="email" id="email" class="heroInput" />
+              <button id="heroButton">Начать бесплатно</button>
+            </form>
+
+            <p class="formSubtitle">
+              Всегда бесплатно — кредитная карта не нужна
+            </p>
+          </div>
+          <div class="placeRight">
+            <img
+              src="assets/headerimage-without-text 1.png"
+              alt="Представление доски Миро и пользователи"
+            />
+          </div>
+        </div>
       </section>
       <section>
         <h2 class="bigHeader">Работайте вместе, где бы вы ни находились</h2>

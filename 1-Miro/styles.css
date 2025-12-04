@@ -12,6 +12,7 @@
 
 body {
   margin: 0;
+  max-width: 1200px;
 }
 
 nav {
@@ -27,6 +28,7 @@ nav ul {
 
 h1 {
   margin: 0 0 17px 0;
+  width: 285px !important;
 }
 
 h2 {
@@ -45,12 +47,30 @@ a {
   text-decoration: none;
 }
 
+.navWrapper {
+  display: flex;
+}
+
 .navHead {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 34px;
 }
 
 .navHeadList {
   color: var(--text-color);
+}
+
+.sectionPlaceWrapper {
+  display: flex;
+  margin: 0 50px 0 40px;
+}
+
+.placeLeft {
+  display: flex;
+  flex-direction: column;
+  margin-right: 65px;
 }
 
 .bigHeader {
@@ -59,20 +79,26 @@ a {
   font-weight: 400;
   line-height: 56px;
   letter-spacing: 1px;
+  width: 38%;
 }
 
 .headerSubtitle {
   color: var(--text-color);
   margin: 0 0 55px 0;
+  width: 100%;
 }
 
-.heroForm input {
+.heroInput {
+  display: flex;
   border-radius: 32px;
   border: 1px solid #9b99af;
   height: 48px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 #heroButton {
+  display: flex;
   background-color: var(--link-color);
   color: #ffffff;
   border-radius: 32px;
@@ -80,7 +106,8 @@ a {
   height: 48px;
   font-size: 18px;
   line-height: 27px;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 130px;
+  width: 100%;
 }
 
 .formSubtitle {
@@ -89,6 +116,10 @@ a {
   color: var(--text-color);
   margin: 8px 0 52px 0;
 }
+
+/*.placeRight img {
+  width: 604px;
+}*/
 
 .description {
   color: var(--text-color-light);

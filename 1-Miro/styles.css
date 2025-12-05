@@ -13,6 +13,7 @@
 body {
   margin: 0;
   max-width: 1200px;
+  margin-inline: auto;
 }
 
 section {
@@ -26,21 +27,21 @@ nav {
   max-width: 1200px;
 }
 
-nav ul {
-  padding: 0;
+h1,
+h2 {
   margin: 0;
 }
 
 h1 {
-  margin: 0 0 17px 0;
-  width: 285px !important;
+  margin-bottom: 17px;
 }
 
 h2 {
-  margin: 0 0 19px 0;
+  margin: 60px 0 19px;
 }
 
 p {
+  margin: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -61,6 +62,8 @@ a {
   display: flex;
   flex-direction: row;
   gap: 34px;
+  padding: 0;
+  margin: 0;
 }
 
 .navHeadList {
@@ -69,7 +72,18 @@ a {
 
 .sectionPlaceWrapper {
   display: flex;
-  margin: 60px 50px 210px 40px;
+  margin: 60px 50px 140px 40px;
+}
+
+.placeWrapper2 {
+  display: flex;
+  gap: 100px;
+  margin: 0 50px 60px 40px;
+  align-items: center;
+}
+
+.section-reverse {
+  flex-direction: row-reverse;
 }
 
 .placeLeft {
@@ -84,7 +98,7 @@ a {
   font-weight: 400;
   line-height: 56px;
   letter-spacing: 1px;
-  width: 38%;
+  width: 100%;
 }
 
 .headerSubtitle {
@@ -113,6 +127,7 @@ a {
   line-height: 27px;
   padding: 10px 20px 10px 130px;
   width: 100%;
+  cursor: pointer;
 }
 
 .formSubtitle {
@@ -125,6 +140,7 @@ a {
 .placeUsers {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .usersCount {
@@ -144,21 +160,6 @@ a {
   text-decoration: underline;
 }
 
-.footerWrapper {
-  background-color: var(--text-color);
-  padding: 47px 40px;
-}
-
-.author {
-  color: var(--text-white);
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.footerLink {
-  color: var(--text-white);
-}
-
 .listDesign {
   list-style-type: none;
 }
@@ -172,4 +173,33 @@ a {
 
 .desingAdv::before {
   content: url("/assets/Frame.svg");
+}
+
+.wrapperDesign {
+  margin: 0 50px 44px 40px;
+}
+
+.footer {
+  background-color: var(--text-color);
+  padding: 47px 40px;
+}
+
+.footerWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 0 40px;
+}
+
+.author {
+  color: var(--text-white);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footerLink {
+  color: var(--text-white);
+  margin-left: 24px;
 }

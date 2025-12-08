@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+html {
+  background: linear-gradient(180deg, #374151 0%, #111827 100%);
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  margin: 70px 0 69px 0;
+}
+
+.navMenu {
+  list-style: none;
+  font-size: 16px;
+}
+
+.navMenuLink {
+  text-decoration: none;
+}
+
+.searchInput {
+  background-color: rgba(31, 41, 55, 0.6);
+  border-radius: 100px;
+  border: none;
+  height: 40px;
+}
+
+.searchInput::placeholder {
+  color: #ffffff;
+  font-size: 16px;
+  opacity: 0.6;
+  padding: 0 0 0 49px;
+}
+
+.typeAndDate {
+  text-align: center;
+  margin: 0 0 14px 0;
+}
+
+.category {
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.lightText {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.articleName {
+  font-size: 24px;
+  line-height: 158%;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 0 30px 0;
+}
+
+.authorName {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: #ffffff;
+}
+
+.decoration {
+  margin: 0 0 28px 0;
+  text-align: center;
+}
+
+.macPhoto {
+  margin: 0 0 60px 0;
+}
+
+.firstText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  margin: 0 0 30px 0;
+}
+
+.plainText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  margin: 0 0 30px 0;
+}
+
+.authorRight {
+  color: #ffffff;
+  font-size: 16px;
+  opacity: 0.6;
+  line-height: 28px;
+  text-align: center;
+  margin: 80px 0 0 0;
+}

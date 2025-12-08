@@ -1,11 +1,14 @@
 :root {
   --color-primary: #6c38cc;
+  --color-primary-hover: #5b2bb2;
   --color-text: #fafafa;
   --color-link-hover: #afb2bf;
   --color-bg: #16171d;
   --color-bg-lightest: #2e2d3d;
   --color-bg-medium: #1e1f29;
   --color-stroke: #4d5064;
+
+  --gradient: linear-gradient(158deg, #d77be5 0%, #be63e5 34.69%, #6c38cc 100%);
 
   --border-8: 8px;
   --layout-width: 1172px;

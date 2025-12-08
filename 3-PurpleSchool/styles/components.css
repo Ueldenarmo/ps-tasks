@@ -37,14 +37,8 @@
   background-color: var(--color-bg-medium);
 }
 
-@media (max-width: 480px) {
-  .button-ps_ghost {
-    padding: 12px 24px;
-    height: 46px;
-    width: 134px;
-  }
-
-  .button-ps_purple {
-    width: 164px;
+@media (max-width: 640px) {
+  .button-ps {
+    padding: 12px 32px;
   }
 }

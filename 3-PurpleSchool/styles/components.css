@@ -1,0 +1,39 @@
+/*Section*/
+.section_light {
+  background-color: var(--color-bg-medium);
+}
+
+.button-ps {
+  border-radius: 10px;
+  padding: 16px 32px;
+  height: 54px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.button-ps_purple {
+  border: none;
+  background-color: var(--color-primary);
+  width: 180px;
+}
+
+.button-ps_ghost {
+  border: 1px solid var(--color-stroke);
+  background-color: transparent;
+  width: 150px;
+}
+
+@media (max-width: 480px) {
+  .button-ps_ghost {
+    padding: 12px 24px;
+    height: 46px;
+    width: 134px;
+  }
+
+  .button-ps_purple {
+    width: 164px;
+  }
+}

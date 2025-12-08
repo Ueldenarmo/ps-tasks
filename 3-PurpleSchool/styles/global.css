@@ -8,6 +8,7 @@
   --color-stroke: #4d5064;
 
   --border-8: 8px;
+  --layout-width: 1172px;
 }
 
 body {
@@ -20,4 +21,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  margin: 0;
 }

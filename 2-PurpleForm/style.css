@@ -1,0 +1,80 @@
+:root {
+  --background-color: #1e1f29;
+  --input-back-color: #2e2d3d;
+  --label-text-color: #afb2bf;
+  --text-color: #fafafa;
+}
+
+* {
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 120%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #16171d;
+}
+
+main {
+  background-color: var(--background-color);
+  padding: 48px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--text-color);
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.wholeField {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.wholeField img {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--input-back-color);
+  color: var(--text-color);
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 27px 48px 12px;
+  border: none;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #51535e;
+  font-size: 16px;
+}
+
+label {
+  color: var(--label-text-color);
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  left: 48px;
+}
+
+button {
+  background-color: #6c38cc;
+  color: var(--text-color);
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  text-align: center;
+  width: 100%;
+}

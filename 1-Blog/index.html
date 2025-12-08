@@ -9,21 +9,28 @@
   <body>
     <header>
       <nav class="nav">
-        <div class="letterB">B</div>
-        <ul class="navMenu">
-          <li><a href="#" class="navMenuLink">Мой блог</a></li>
-          <li><a href="#" class="navMenuLink">HTML и CSS</a></li>
-          <li><a href="#" class="navMenuLink">Frontend</a></li>
-          <li><a href="#" class="navMenuLink">Backend</a></li>
-        </ul>
+        <div class="navWrapper">
+          <div class="letterBcont">
+            <span class="letterB">B</span>
+          </div>
+          <ul class="navMenu">
+            <li><a href="#" class="navMenuLink">Мой блог</a></li>
+            <li><a href="#" class="navMenuLink">HTML и CSS</a></li>
+            <li><a href="#" class="navMenuLink">Frontend</a></li>
+            <li><a href="#" class="navMenuLink">Backend</a></li>
+          </ul>
+        </div>
       </nav>
       <form class="search">
-        <input
-          type="text"
-          placeholder="Поиск"
-          name="search"
-          class="searchInput"
-        />
+        <div class="searchWrapper">
+          <img src="assets/search.svg" alt="Иконка лупа" />
+          <input
+            type="text"
+            placeholder="Поиск"
+            name="search"
+            class="searchInput"
+          />
+        </div>
       </form>
     </header>
     <main>
@@ -41,8 +48,10 @@
             alt="Фото девушки автора статьи"
             class="authorPhoto"
           />
-          <p class="authorName">Наталья Васильева</p>
-          <p class="lightText">Разработчик</p>
+          <div class="decoDescription">
+            <p class="authorName">Наталья Васильева</p>
+            <p class="lightText">Разработчик</p>
+          </div>
         </div>
       </section>
       <section>

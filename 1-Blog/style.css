@@ -5,25 +5,76 @@
   color: #ffffff;
 }
 
-html {
-  background: linear-gradient(180deg, #374151 0%, #111827 100%);
-}
-
 body {
   margin: 0;
+  background: linear-gradient(180deg, #374151 0%, #111827 100%);
+  background-repeat: no-repeat;
+  min-width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 header {
-  margin: 70px 0 69px 0;
+  margin: 50px 0 70px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.letterBcont {
+  position: relative;
+  border-radius: 3px;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+  background: #4b5563;
+  font-size: 18px;
+  margin: 5px 11px 0 180px;
+}
+
+.letterB {
+  position: absolute;
+  top: 6px;
+  left: 12px;
 }
 
 .navMenu {
   list-style: none;
   font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 15px 0 0 0;
+  padding: 0;
 }
 
 .navMenuLink {
   text-decoration: none;
+}
+
+.searchWrapper {
+  position: absolute;
+  top: 71px;
+  right: 180px;
+}
+
+.searchWrapper img {
+  position: absolute;
+  top: 14px;
+  left: 18px;
 }
 
 .searchInput {
@@ -31,6 +82,7 @@ header {
   border-radius: 100px;
   border: none;
   height: 40px;
+  width: 224px;
 }
 
 .searchInput::placeholder {
@@ -54,6 +106,13 @@ header {
 .lightText {
   font-size: 14px;
   opacity: 0.6;
+  margin: 0 0 14px 0;
+}
+
+.headSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .articleName {
@@ -62,6 +121,26 @@ header {
   text-align: center;
   color: #ffffff;
   margin: 0 0 30px 0;
+  width: 40%;
+  display: flex;
+}
+
+.decoration {
+  text-align: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.authorPhoto {
+  width: 50px;
+  height: 50px;
+}
+
+.decoDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .authorName {
@@ -69,31 +148,37 @@ header {
   font-size: 16px;
   line-height: 175%;
   color: #ffffff;
-}
-
-.decoration {
-  margin: 0 0 28px 0;
-  text-align: center;
+  margin: 0 0 5px 0;
 }
 
 .macPhoto {
-  margin: 0 0 60px 0;
+  margin: 0 272px 60px 272px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .firstText {
+  display: flex;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   color: #ffffff;
   margin: 0 0 30px 0;
+  width: 50%;
 }
 
 .plainText {
+  display: flex;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   color: #ffffff;
   margin: 0 0 30px 0;
+  width: 50%;
 }
 
 .authorRight {
@@ -102,5 +187,5 @@ header {
   opacity: 0.6;
   line-height: 28px;
   text-align: center;
-  margin: 80px 0 0 0;
+  margin: 80px 0 76px 0;
 }

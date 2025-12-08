@@ -1,11 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #fdc5c5 0%, #f39494 100%);
+  background-repeat: no-repeat;
+  min-width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
 .register-form {
   background-color: #fffefe;
   font-family: "Open Sans", sans-serif;
+  width: 582px;
+  height: 573px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 72px 94px 72px 94px;
+}
+
+.register-form__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.register-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.register-form__field--row {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  margin-bottom: 22px;
 }
 
 .register-form__title {
   font-size: 36px;
   color: #333333;
+  margin: 0;
 }
 
 .register-form__subtitle {
@@ -19,6 +66,19 @@
 
 .register-form__input {
   font-size: 16px;
+  height: 45px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.register-form__input--fill {
+  background-color: #ffffff;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .register-form__input::placeholder {
@@ -26,18 +86,63 @@
   font-style: italic;
 }
 
+.register-form__actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .register-form__submit {
   background-color: #089fe0;
   color: #ffffff;
   font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 44px;
 }
 
 .register-form__label {
   font-size: 14px;
   color: #666666;
+  cursor: pointer;
 }
 
 .register-form__terms-link a {
   color: #089fe0;
   text-decoration: none;
+}
+
+.register-form__agreement {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.register-form__checkbox {
+  appearance: none;
+  background: #f5f5f5;
+  width: 14px;
+  height: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.register-form__checkbox:checked {
+  background-color: #089fe0;
+  border-color: #089fe0;
+}
+
+.register-form__checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  color: #ffffff;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

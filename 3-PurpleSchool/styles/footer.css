@@ -1,0 +1,16 @@
+.footer {
+  background-color: var(--color-footer);
+}
+
+.footer__wrapper {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 24px;
+}

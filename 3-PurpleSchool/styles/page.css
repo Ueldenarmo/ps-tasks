@@ -76,3 +76,16 @@
 }
 
 /*Blog*/
+.blog {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 100px 146px;
+}
+
+.blog__head {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}

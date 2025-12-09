@@ -114,3 +114,13 @@
   background-color: var(--color-bg-medium);
   border-radius: 10px;
 }
+
+@media (max-width: 860px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .post__header {
+    font-size: 21px;
+  }
+}

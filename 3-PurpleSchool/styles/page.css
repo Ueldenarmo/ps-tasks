@@ -143,3 +143,19 @@
   justify-content: center;
   margin-top: 48px;
 }
+
+@media (max-width: 860px) {
+  .post {
+    flex-direction: column;
+  }
+
+  .post__button {
+    display: block;
+    margin: 16px;
+    width: 100%;
+  }
+
+  .post__button button {
+    width: 90%;
+  }
+}

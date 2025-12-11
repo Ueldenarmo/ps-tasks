@@ -1,3 +1,43 @@
+:root {
+  --color-primary: #357efe;
+  --color-secondary: #ffffff;
+  --color-dark: #000000;
+  --color-medium-dark: rgba(78, 93, 124, 0.5);
+  --color-medium-light: rgba(255, 255, 255, 0.6);
+  --color-supertitle: #1abc9c;
+  --color-highlight: #ffc736;
+
+  --shadow-primary: 0 0 32px 0 rgba(78, 93, 124, 0.16);
+  --shadow-secondary: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-secondary);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }

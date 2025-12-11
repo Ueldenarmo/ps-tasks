@@ -1,0 +1,47 @@
+/*Titles*/
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--color-dark);
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--color-medium-dark);
+  margin-bottom: 40px;
+}
+
+/*Cards*/
+.tariff__card {
+  border-radius: var(--border-8);
+  box-shadow: var(--shadow-primary);
+}
+
+.tariff__card-title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 120%;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.tariff__card-subtitle {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: var(--color-medium-dark);
+  width: 100%;
+}
+
+.tariff__card-description {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 120%;
+}

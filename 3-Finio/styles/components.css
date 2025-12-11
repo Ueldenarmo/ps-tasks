@@ -45,3 +45,15 @@
   font-size: 17px;
   line-height: 120%;
 }
+
+/*Buttons*/
+.button__tariff {
+  border: none;
+  border-radius: var(--border-47);
+  padding: 12px 63px;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 140%;
+}

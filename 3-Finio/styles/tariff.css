@@ -1,39 +1,40 @@
 .section_tariff {
-  margin: 80px auto;
-  display: grid;
-  gap: 24px;
-  justify-items: center;
+    margin: 80px auto;
+    display: grid;
+    gap: var(--standard-indent);
+    max-width: 1156px;
 }
 
 .tariff__cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+    gap: var(--standard-indent);
 }
 
 .tariff__card-supertitle {
-  display: inline-block;
-  color: var(--color-secondary);
-  border: none;
-  border-radius: var(--border-8);
-  background-color: var(--color-supertitle);
-  padding: 4px 16px;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 140%;
+    display: inline-block;
+    color: var(--color-secondary);
+    border: none;
+    border-radius: var(--border-8);
+    background-color: var(--color-supertitle);
+    padding: 4px 16px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
 }
 
 .tariff__card-supertitle_number {
-  font-weight: 800;
+    font-weight: 800;
 }
 
 .tariff__numbers-higlithed {
-  color: var(--color-secondary);
-  border: none;
-  border-radius: var(--border-8);
-  background-color: var(--color-highlight);
-  padding: 8px 16px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 120%;
+    color: var(--color-secondary);
+    border: none;
+    border-radius: var(--border-8);
+    background-color: var(--color-highlight);
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 120%;
 }

@@ -19,8 +19,12 @@
 
 /*Cards*/
 .tariff__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     border-radius: var(--border-8);
     box-shadow: var(--shadow-primary);
+    padding: 48px 40px 48px 40px;
 }
 
 .tariff__card-title {
@@ -37,6 +41,7 @@
     line-height: 140%;
     color: var(--color-medium-dark);
     width: 100%;
+    min-height: 72px;
 }
 
 .tariff__card-description {
@@ -44,6 +49,15 @@
     font-weight: 500;
     font-size: 17px;
     line-height: 120%;
+    margin-bottom: 40px;
+}
+
+.tariff__card-item {
+    border-bottom: 1px solid rgba(78, 93, 124, 0.08);
+}
+
+.tariff__card-item:last-child {
+    border-bottom: none;
 }
 
 .card-item__name {
@@ -63,4 +77,10 @@
     font-weight: 800;
     font-size: 17px;
     line-height: 140%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button__tariff:hover {
+    background-color: #7ba0e2;
 }

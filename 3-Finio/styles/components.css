@@ -8,6 +8,13 @@
     margin-bottom: var(--standard-indent);
 }
 
+@media (max-width: 640px) {
+    .title {
+        font-size: 36px;
+        text-align: start;
+    }
+}
+
 .subtitle {
     font-weight: 500;
     font-size: 17px;
@@ -15,6 +22,13 @@
     text-align: center;
     color: var(--color-medium-dark);
     margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+    .subtitle {
+        text-align: start;
+        margin-bottom: 32px;
+    }
 }
 
 /*Cards*/
@@ -25,6 +39,12 @@
     border-radius: var(--border-8);
     box-shadow: var(--shadow-primary);
     padding: 48px 40px 48px 40px;
+}
+
+@media (max-width: 640px) {
+    .tariff__card {
+        padding: 48px 24px 48px 24px;
+    }
 }
 
 .tariff__card-title {
@@ -79,6 +99,7 @@
     line-height: 140%;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    width: 100%;
 }
 
 .button__tariff:hover {

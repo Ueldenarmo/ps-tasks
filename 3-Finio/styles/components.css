@@ -33,8 +33,8 @@
 
 /*Cards*/
 .tariff__card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
     justify-content: end;
     border-radius: var(--border-8);
     box-shadow: var(--shadow-primary);

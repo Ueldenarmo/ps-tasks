@@ -159,3 +159,8 @@
     width: 90%;
   }
 }
+
+/* catalog */
+.catalog__buttons-set .button-ps {
+  padding: 8px 16px;
+}

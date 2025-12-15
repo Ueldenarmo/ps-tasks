@@ -167,12 +167,22 @@
   padding: 72px 24px;
   align-items: center;
 }
+
 .catalog__buttons-set {
   display: flex;
   gap: 24px;
-  padding-right: -24px;
   margin-bottom: 32px;
+  overflow: scroll;
+  margin-right: -24px;
+  margin-left: -24px;
+  padding-left: 24px;
+  scrollbar-width: none;
 }
+
+.catalog__buttons-set::-webkit-scrollbar {
+  display: none;
+}
+
 .catalog__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));

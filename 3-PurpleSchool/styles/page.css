@@ -161,6 +161,24 @@
 }
 
 /* catalog */
+.catalog {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 72px 24px;
+  align-items: center;
+}
+.catalog__buttons-set {
+  display: flex;
+  gap: 24px;
+  padding-right: -24px;
+  margin-bottom: 32px;
+}
+.catalog__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+  gap: 70px;
+}
+
 .catalog__buttons-set .button-ps {
   padding: 8px 16px;
 }

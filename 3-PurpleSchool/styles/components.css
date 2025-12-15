@@ -7,7 +7,6 @@
 .button-ps {
   border-radius: 10px;
   padding: 16px 32px;
-  height: 54px;
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
@@ -125,4 +124,80 @@
   }
 }
 
-/* card */
+/* Courses card */
+.ccard {
+  background: var(--color-bg-medium);
+  color: var(--color-text);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ccard__cover img {
+  width: 100%;
+}
+
+.ccard__body {
+  margin: 24px;
+}
+
+.ccard__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.ccard___subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--color-link-hover);
+  margin-bottom: 16px;
+}
+
+.ccard__time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+
+.ccard__items {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ccard__items .stats-item__text {
+  color: var(--color-text);
+}
+
+.ccard__items-grade {
+  border: 1px solid var(--color-stroke);
+  border-radius: 17px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.ccard__items-type {
+  border: 1px solid var(--color-stroke);
+  border-radius: 17px;
+  padding: 6px 12px;
+}
+
+.ccard__footer {
+  background-color: var(--color-bg-lightest);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.ccard__footer-text {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 120%;
+}

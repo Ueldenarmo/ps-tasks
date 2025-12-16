@@ -75,6 +75,43 @@
   }
 }
 
+/*Trusting*/
+.trusting {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.trusting__head .subtitle {
+  width: 70%;
+  margin-bottom: 48px;
+}
+
+.trusting__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+  gap: 70px;
+  margin-bottom: 70px;
+}
+
+.trusting__rate-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+  gap: 70px;
+}
+
+@media (max-width: 860px) {
+  .trusting__head .subtitle {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .trusting__items {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+
 /*Blog*/
 .blog {
   display: flex;

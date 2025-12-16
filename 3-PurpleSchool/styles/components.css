@@ -124,6 +124,83 @@
   }
 }
 
+.trusting__rate-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+/* Cards in trusting */
+.trusting__item {
+  background-color: var(--color-bg-lightest);
+  border-radius: 10px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.trusting__item-big {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 120%;
+  text-align: center;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+
+.trusting__item-mini {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.trusting__rate-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 24px;
+  align-items: center;
+  padding: 24px 32px;
+}
+
+.trusting__rate-numb {
+  grid-row: 1 / -1;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 120%;
+  color: var(--color-text);
+}
+
+.trusting__rate-item img:first-of-type {
+  grid-column: 2;
+  grid-row: 1;
+  max-height: 28px;
+  margin-bottom: -10px;
+}
+
+.trusting__rate-item img:last-of-type {
+  grid-column: 2;
+  grid-row: 2;
+  max-height: 16px;
+}
+
+@media (max-width: 860px) {
+  .trusting__item {
+    padding: 16px 20px;
+  }
+
+  .trusting__item-big {
+    margin: 0;
+    font-size: 30px;
+  }
+}
+
 /* Courses card */
 .ccard {
   background: var(--color-bg-medium);

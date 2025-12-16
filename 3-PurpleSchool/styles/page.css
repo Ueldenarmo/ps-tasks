@@ -110,6 +110,10 @@
     gap: 16px;
     margin-bottom: 32px;
   }
+
+  .trusting__rate-items {
+    gap: 16px;
+  }
 }
 
 /*Blog*/

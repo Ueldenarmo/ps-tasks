@@ -114,6 +114,14 @@
   border-radius: 10px;
 }
 
+.trusting__rate-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
 @media (max-width: 860px) {
   .title {
     font-size: 34px;
@@ -122,14 +130,10 @@
   .post__header {
     font-size: 21px;
   }
-}
 
-.trusting__rate-title {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 120%;
-  color: var(--color-text);
-  margin-bottom: 32px;
+  .trusting__rate-title {
+    font-size: 26px;
+  }
 }
 
 /* Cards in trusting */
@@ -198,6 +202,14 @@
   .trusting__item-big {
     margin: 0;
     font-size: 30px;
+  }
+
+  .trusting__rate-item {
+    padding: 36px 46px;
+  }
+
+  .trusting__rate-numb {
+    font-size: 44px;
   }
 }
 

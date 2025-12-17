@@ -1,0 +1,6 @@
+/* Header */
+.header__wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: calc(1156px + 24px * 2);
+}

@@ -1,3 +1,8 @@
+/* Sections */
+.section-blue {
+    background-color: var(--color-primary);
+}
+
 /*Titles*/
 .title {
     font-weight: 600;
@@ -88,7 +93,7 @@
 }
 
 /*Buttons*/
-.button__tariff {
+.button {
     border: none;
     border-radius: var(--border-47);
     padding: 12px 63px;
@@ -102,6 +107,6 @@
     width: 100%;
 }
 
-.button__tariff:hover {
+.button:hover {
     background-color: #7ba0e2;
 }

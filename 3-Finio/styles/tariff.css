@@ -1,5 +1,5 @@
 .section_tariff {
-    margin: 0 auto;
+    margin: 80px auto;
     display: grid;
     gap: var(--standard-indent);
     max-width: calc(1156px + 24px * 2);

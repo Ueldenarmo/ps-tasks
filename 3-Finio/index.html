@@ -16,6 +16,7 @@
         />
     </head>
     <body>
+        <!-- Header -->
         <header class="header section-blue">
             <div class="header__wrapper">
                 <a href="#"
@@ -42,44 +43,64 @@
                 </button>
             </div>
         </header>
-        <section class="section section-blue">
-            <div class="opening__wrapper">
-                <h1 class="title title_light title_big">
-                    Простой финансовый учёт для продавцов на маркетплейсах
-                </h1>
-                <button class="button">Попробовать 14 дней бесплатно</button>
-                <div class="opening-logo">
-                    <img src="./assets/img/svg/wb.svg" alt="Иконка Wildberries" />
-                    <img src="./assets/img/svg/ozon.svg" alt="Иконка Ozon" />
-                    <img src="./assets/img/svg/yandexmarket.svg" alt="Иконка ЯндексМаркет" />
-                    <img src="./assets/img/svg/aliexpress.svg" alt="Иконка Aliexpress" />
+
+        <!-- Hero -->
+        <section class="section-blue section-hero">
+            <div class="hero__wrapper">
+                <div class="hero__wrapper-sides">
+                    <div class="hero-left">
+                        <h1 class="title_light title_big">
+                            Простой финансовый учёт для продавцов на маркетплейсах
+                        </h1>
+                        <button class="button">Попробовать&nbsp;14&nbsp;дней&nbsp;бесплатно</button>
+                        <div class="hero-logos">
+                            <div class="hero-logos__first-row">
+                                <img src="./assets/img/svg/wb.svg" alt="Иконка Wildberries" />
+                                <img src="./assets/img/svg/ozon.svg" alt="Иконка Ozon" />
+                            </div>
+                            <div class="hero-logos__second-row">
+                                <img
+                                    src="./assets/img/svg/yandexmarket.svg"
+                                    alt="Иконка ЯндексМаркет"
+                                />
+                                <img
+                                    src="./assets/img/svg/aliexpress.svg"
+                                    alt="Иконка Aliexpress"
+                                    class="aliexpress"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <img
+                            src="./assets/img/png/dekstop.png"
+                            alt="Изображение ноутбука с Finio на экране"
+                        />
+                    </div>
                 </div>
-                <img
-                    src="./assets/img/png/dekstop.png"
-                    alt="Изображение ноутбука с Finio на экране"
-                />
-                <div class="opening-advantages">
-                    <div class="opening-advantages__item">
+                <div class="advantages-wrapper">
+                    <div class="advantages-item_hero">
                         <img src="./assets/img/svg/diagram.svg" alt="Иконка диаграммы" />
-                        <p class="opening-advantages__item-text">
-                            Анализ прибыли по товарам и брендам
+                        <p class="advantages-item-text">
+                            Анализ прибыли по <br />товарам и брендам
                         </p>
                     </div>
-                    <div class="opening-advantages__item">
+                    <div class="advantages-item_hero">
                         <img src="./assets/img/svg/wbcircle.svg" alt="Иконка Wildberries" />
-                        <p class="opening-advantages__item-text">
-                            Автоматический учёт доходов Wildberries
+                        <p class="advantages-item-text">
+                            Автоматический учёт <br />доходов Wildberries
                         </p>
                     </div>
-                    <div class="opening-advantages__item">
+                    <div class="advantages-item_hero">
                         <img src="./assets/img/svg/ruble.svg" alt="Иконка рубля" />
-                        <p class="opening-advantages__item-text">
-                            От 990 рублей в месяц с полным функционалом
+                        <p class="advantages-item-text">
+                            От 990 рублей в месяц <br />с полным функционалом
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Tariff -->
         <section class="section section_tariff">
             <div class="tariff__container">
                 <h2 class="title title_tariff_">Тарифы</h2>
@@ -87,7 +108,6 @@
                     Все тарифы имеют полный функционал и отличаются только количеством месяцев и
                     выгодой
                 </p>
-
                 <div class="tariff__cards">
                     <div class="tariff__card">
                         <h3 class="tariff__card-title tariff__card-title_less">1 месяц</h3>

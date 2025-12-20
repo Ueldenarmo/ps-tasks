@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    max-width: calc(1390px + 24px * 2);
+    max-width: calc(1392px + 48px);
+    padding-inline: 24px;
     padding: 40px 24px;
 }
 
@@ -60,10 +61,10 @@
     }
 }
 
-/* Hero */
+/* Hero*/
 .section-hero {
     position: relative;
-    padding: 60px 0 40px 0;
+    padding: 70px 0 40px 0;
     background: transparent;
 }
 
@@ -72,14 +73,38 @@
     position: absolute;
     inset: 0;
     background: var(--color-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 48%, 0 68%);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 73%);
     z-index: 0;
 }
 
+@media (max-width: 1280px) {
+    .section-hero::before {
+        clip-path: polygon(0 0, 100% 0, 100% 57%, 0 75%);
+    }
+}
+
+@media (max-width: 1210px) {
+    .section-hero::before {
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 80%);
+    }
+}
+
+@media (max-width: 960px) {
+    .section-hero::before {
+        clip-path: polygon(0 0, 100% 0, 100% 53%, 0 58%);
+    }
+}
+
+@media (max-width: 480px) {
+    .section-hero::before {
+        clip-path: polygon(0 0, 100% 0, 100% 58%, 0 63%);
+    }
+}
+
 .hero__wrapper {
-    max-width: calc(1495px + 24px * 2);
+    max-width: calc(1392px + 48px);
+    padding-inline: 24px;
     margin: 0 auto;
-    padding: 0 24px;
     position: relative;
     z-index: 1;
 }
@@ -94,6 +119,7 @@
 .hero-left {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .hero-left .button {
@@ -102,15 +128,26 @@
     padding: 12px 32px;
     border-radius: 34px;
     margin-bottom: 80px;
+    width: 75%;
 }
 
 .hero-left .button:hover {
     background-color: #ebebeb;
 }
 
+.hero-right {
+    width: 100%;
+}
+
+.hero-right img {
+    width: 110%;
+    transform: translateY(-20px);
+}
+
 .hero-logos {
     display: flex;
     flex-direction: column;
+    width: 100;
 }
 
 .hero-logos__first-row {
@@ -128,4 +165,23 @@
 
 .aliexpress {
     padding-top: 3px;
+}
+
+@media (max-width: 960px) {
+    .hero__wrapper-sides {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-left .button {
+        width: 100%;
+    }
+
+    .hero-right {
+        display: none;
+    }
 }

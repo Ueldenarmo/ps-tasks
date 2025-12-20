@@ -25,6 +25,20 @@
     margin-bottom: 40px;
 }
 
+.items-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    color: var(--color-dark);
+}
+
+.feature-text p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--color-medium-dark);
+}
+
 @media (max-width: 960px) {
     .title {
         font-size: 36px;
@@ -35,8 +49,13 @@
         font-size: 32px;
         margin-bottom: 32px;
     }
+
+    .items-title {
+        font-size: 32px;
+    }
 }
 
+/* Subtitles and texts */
 .subtitle {
     font-weight: 500;
     font-size: 17px;

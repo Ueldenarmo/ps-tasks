@@ -64,7 +64,7 @@
 /* Hero*/
 .section-hero {
     position: relative;
-    padding: 70px 0 40px 0;
+    padding: 70px 0 80px 0;
     background: transparent;
 }
 
@@ -185,3 +185,5 @@
         display: none;
     }
 }
+
+/*  */

@@ -172,3 +172,10 @@
         align-items: start;
     }
 }
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(78, 93, 124, 0.08);
+    width: 72%;
+}

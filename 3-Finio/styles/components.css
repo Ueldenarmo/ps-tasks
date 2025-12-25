@@ -164,7 +164,7 @@
 
 /* Security cards */
 .security__card img {
-    margin-bottom: 24px;
+    margin-bottom: var(--standard-indent);
 }
 
 .security__card-title {
@@ -180,8 +180,9 @@
 }
 
 @media (max-width: 960px) {
-    .tariff__card {
-        padding: 48px 24px 48px 24px;
+    .security__card-title {
+        font-size: 24px;
+        margin-bottom: var(--standard-indent);
     }
 }
 

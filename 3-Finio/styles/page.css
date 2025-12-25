@@ -5,7 +5,7 @@
     align-items: center;
     margin: 0 auto;
     max-width: calc(1392px + 48px);
-    padding-inline: 24px;
+    padding-inline: var(--standard-indent);
     padding: 40px 24px;
 }
 
@@ -103,7 +103,7 @@
 
 .hero__wrapper {
     max-width: calc(1392px + 48px);
-    padding-inline: 24px;
+    padding-inline: var(--standard-indent);
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -146,7 +146,7 @@
 
 .hero-logos__second-row {
     display: flex;
-    gap: 24px;
+    gap: var(--standard-indent);
     align-items: start;
 }
 
@@ -180,7 +180,7 @@
     align-items: center;
     margin: 0 auto;
     max-width: calc(1392px + 48px);
-    padding-inline: 24px;
+    padding-inline: var(--standard-indent);
 }
 
 .feature__item {
@@ -193,7 +193,7 @@
 .feature-text {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--standard-indent);
 }
 
 .feature__item img {
@@ -218,15 +218,27 @@
     align-items: center;
     margin: 0 auto;
     max-width: calc(1392px + 48px);
-    padding-inline: 24px;
-    padding-top: 120px;
+    padding: 120px 24px;
 }
 
 .comparison__wrapper .button_try {
     display: inline;
     width: auto;
+    margin-bottom: 60px;
 }
 
-.comparison__wrapper img {
+.comparison__img {
     width: 100%;
+    margin-bottom: 64px;
+}
+
+.comparison-text {
+    display: flex;
+    gap: 70px;
+}
+
+.comparison-text__item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: var(--standard-indent);
 }

@@ -162,6 +162,29 @@
     padding: 16px 0;
 }
 
+/* Security cards */
+.security__card img {
+    margin-bottom: 24px;
+}
+
+.security__card-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.subtitle_security {
+    margin: 0;
+    text-align: start;
+}
+
+@media (max-width: 960px) {
+    .tariff__card {
+        padding: 48px 24px 48px 24px;
+    }
+}
+
 /*Buttons*/
 .button {
     border: none;

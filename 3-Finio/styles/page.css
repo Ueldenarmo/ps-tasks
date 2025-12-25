@@ -263,3 +263,12 @@
         margin-bottom: 0;
     }
 }
+
+/* Security */
+.security__wrapper {
+    display: flex;
+    gap: 78px;
+    margin: 0 auto;
+    max-width: calc(1392px + 48px);
+    padding: 120px 24px 80px;
+}

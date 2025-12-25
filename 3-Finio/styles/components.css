@@ -100,6 +100,10 @@
         text-align: start;
         margin-bottom: 32px;
     }
+
+    .big-sub {
+        width: 100%;
+    }
 }
 
 /*Cards*/

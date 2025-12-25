@@ -242,3 +242,24 @@
     gap: 8px;
     margin-bottom: var(--standard-indent);
 }
+
+@media (max-width: 960px) {
+    .comparison__wrapper {
+        padding: 64px 24px;
+    }
+
+    .comparison-text {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .comparison-text__item {
+        gap: 8px;
+        align-items: center;
+    }
+
+    .comparison-sub {
+        margin-bottom: 0;
+    }
+}

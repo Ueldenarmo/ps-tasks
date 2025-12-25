@@ -13,6 +13,10 @@
     margin-bottom: var(--standard-indent);
 }
 
+.title_on-blue {
+    color: var(--color-secondary);
+}
+
 .title_light {
     font-weight: 800;
     font-size: 40px;
@@ -58,15 +62,28 @@
 /* Subtitles and texts */
 .subtitle {
     font-weight: 500;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 140%;
     text-align: center;
     color: var(--color-medium-dark);
     margin-bottom: 40px;
 }
 
+.subtitle_blue {
+    color: var(--color-meduim-lightest);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+}
+
 @media (max-width: 960px) {
     .subtitle {
+        text-align: start;
+        margin-bottom: 32px;
+    }
+
+    .subtitle_blue {
         text-align: start;
         margin-bottom: 32px;
     }
@@ -140,11 +157,26 @@
     line-height: 140%;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    width: 100%;
+    display: inline;
+    width: auto;
 }
 
 .button:hover {
     background-color: #7ba0e2;
+}
+
+.button_try {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    padding: 12px 32px;
+    border-radius: 34px;
+    margin-bottom: 80px;
+    display: inline;
+    width: auto;
+}
+
+.button_try:hover {
+    background-color: #ebebeb;
 }
 
 /* Advantages cards */

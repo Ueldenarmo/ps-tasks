@@ -122,19 +122,6 @@
     width: 50%;
 }
 
-.hero-left .button {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-    padding: 12px 32px;
-    border-radius: 34px;
-    margin-bottom: 80px;
-    width: 75%;
-}
-
-.hero-left .button:hover {
-    background-color: #ebebeb;
-}
-
 .hero-right {
     width: 100%;
 }
@@ -222,4 +209,24 @@
     .feature__item-reverse {
         flex-direction: column-reverse;
     }
+}
+
+/* Comparison */
+.comparison__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: calc(1392px + 48px);
+    padding-inline: 24px;
+    padding-top: 120px;
+}
+
+.comparison__wrapper .button_try {
+    display: inline;
+    width: auto;
+}
+
+.comparison__wrapper img {
+    width: 100%;
 }

@@ -308,3 +308,8 @@
         overflow: hidden;
     }
 }
+
+/* Support */
+.img__support {
+    display: block;
+}

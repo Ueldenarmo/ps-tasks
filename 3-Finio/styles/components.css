@@ -36,6 +36,10 @@
     color: var(--color-dark);
 }
 
+.items-title_light {
+    color: var(--color-secondary);
+}
+
 .feature-text p {
     font-weight: 500;
     font-size: 18px;

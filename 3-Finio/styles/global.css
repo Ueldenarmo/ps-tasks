@@ -48,3 +48,9 @@ h4 {
 p {
     margin: 0;
 }
+
+@media (max-width: 960px) {
+    html {
+        overflow-y: none;
+    }
+}

@@ -27,6 +27,10 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+.nav-block {
+    margin-top: -20px;
+}
+
 .menu-footer {
     display: flex;
     flex-direction: column;
@@ -38,4 +42,8 @@
     font-size: 17px;
     line-height: 140%;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-footer__link:hover {
+    color: var(--color-secondary);
 }

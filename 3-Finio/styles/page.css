@@ -389,13 +389,70 @@
 .reviews__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 16px;
     margin: 0 auto;
-    max-width: calc(1392px + 24px * 2);
+    max-width: calc(1156px + 24px * 2);
+    padding-bottom: 80px;
 }
 
 .reviews__scope {
     display: flex;
+    position: relative;
+    box-shadow: var(--shadow-primary);
+}
+
+.reviews__scope_text {
+    color: var(--color-secondary);
+    position: relative;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-left-radius: var(--border-8);
+    border-bottom-left-radius: var(--border-8);
+}
+
+.arrow {
+    position: absolute;
+}
+
+.arrow_left {
+    transform: scale(-1, 1);
+    top: 199px;
+    left: 0px;
+}
+
+.arrow_right {
+    top: 199px;
+    right: 0px;
+}
+
+.review__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    padding: 0 0 40px 104px;
+    width: 80%;
+}
+
+.review__author {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 140%;
+    padding: 0 0 0 104px;
+}
+
+.review__role {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    padding: 0 0 0 104px;
+}
+
+.img__review {
+    height: 100%;
+    border-top-right-radius: var(--border-8);
+    border-bottom-right-radius: var(--border-8);
 }
 
 .review__choice {

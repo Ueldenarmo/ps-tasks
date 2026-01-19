@@ -1,5 +1,4 @@
-function calculateDiscountedPrice(price, discountPercent) {
-    const discountSum = (price, discountPercent) => price * (discountPercent / 100);
-    return price - discountSum(price, discountPercent);
-}
-console.log(calculateDiscountedPrice(75, 90));
+const arr = [10, 20, 30, 40, 50];
+
+const newArr = arr.slice(-2);
+console.log(newArr);

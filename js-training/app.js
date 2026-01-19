@@ -1,4 +1,3 @@
-const arr = [10, 20, 30, 40, 50];
-
-const newArr = arr.slice(-2);
-console.log(newArr);
+const roles = ["developer", "admin", "user", "superuser", "manager"];
+roles.push("test");
+console.log(roles);

@@ -1,14 +1,11 @@
-const numbers = [3, 7, 2, 9, 1];
-const threshold = 10;
+const mixedArray = ["apple", 25, "banana", false, "cherry", null, "date", 100];
+const stringElements = [];
 
-let found = false;
-for (let i = 0; i < numbers.length; i++) {
-    found = true;
-    if (numbers[i] > threshold) {
-        console.log(numbers[i]);
-        break;
+for (let i = 0; i < mixedArray.length; i++) {
+    if (typeof mixedArray[i] === "string") {
+        stringElements.push(mixedArray[i]);
     }
+    continue;
 }
-if (!found) {
-    console.log("Элемент не найден");
-}
+
+console.log(stringElements);

@@ -1,11 +1,25 @@
-const mixedArray = ["apple", 25, "banana", false, "cherry", null, "date", 100];
-const stringElements = [];
+// function createDivider(divisor) {
+//     if (divisor !== 0) {
+//         return function doDivide(value) {
+//             return value / divisor;
+//         };
+//     }
+//     console.error(`Делитель не должен быть равен нулю`);
+// }
 
-for (let i = 0; i < mixedArray.length; i++) {
-    if (typeof mixedArray[i] === "string") {
-        stringElements.push(mixedArray[i]);
-    }
-    continue;
+// Тестирование
+// const divideByTwo = createDivider(0);
+// console.log(divideByTwo(10)); // 5
+
+// const divideByFour = createDivider(4);
+// console.log(divideByFour(20)); // 5
+
+function calculate(x, y, operation) {
+    return operation(x, y);
 }
 
-console.log(stringElements);
+function createPower(power) {
+    return function doPower(value) {
+        return value ** power;
+    };
+}

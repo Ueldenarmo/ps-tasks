@@ -1,5 +1,14 @@
-const numbers = [15, 28, 42, 7, 33];
-const target = 25;
+// const text = "Lord of the Ring";
+// const targetLength = 5;
 
-let isTargetNumber = numbers.some((num) => num === target);
-console.log(isTargetNumber);
+// function result(stringWithText, currentLength) {
+//     if (stringWithText.length < currentLength) {
+//         let newText = stringWithText.padStart(currentLength, "*");
+//         return newText;
+//     }
+//     return stringWithText;
+// }
+
+// console.log(result(text, targetLength));
+
+console.log("file.txt".endsWith(".txt"));

@@ -1,0 +1,68 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+body {
+	background-color: #173f35;
+	font-family: "Open Sans", sans-serif;
+	color: #cfe6df;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.textLabel {
+	min-width: 170px;
+}
+
+.inputNumber {
+	padding: 8px 10px;
+	border-radius: 7px;
+	border: none;
+	outline: none;
+	background-color: #224f43;
+	color: #cfe6df;
+}
+
+.operations {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.button {
+	padding: 8px 14px;
+	border-radius: 7px;
+	border: none;
+	background-color: #2a6a5b;
+	color: #cfe6df;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #35806f;
+}
+
+.result {
+	padding: 10px;
+	border-radius: 7px;
+	background-color: #224f43;
+	color: #cfe6df;
+	min-height: 20px;
+	text-align: center;
+}

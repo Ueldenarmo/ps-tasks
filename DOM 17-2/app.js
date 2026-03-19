@@ -21,4 +21,4 @@ function inputChanged(e) {
     }
 }
 
-console.log(document);
+

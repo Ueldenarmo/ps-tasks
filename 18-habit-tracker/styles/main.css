@@ -7,8 +7,15 @@
 	--main-text-color: #000000;
 	--light-hover-color: #eff2ff;
 	--border-color: #e7ebfb;
+	--grey-for-text: #768396;
 	--font-weight-nornal: 400;
 	--font-family: "Comfortaa", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 * {
@@ -19,6 +26,24 @@ body {
 	font-family: var(--font-family);
 	margin: 0;
 	background-color: var(--main-color);
+}
+
+h1 {
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-nornal);
+	font-size: 30px;
+	line-height: 33px;
+	color: var(--main-text-color);
+	max-width: 40%;
+}
+
+h2 {
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-nornal);
+	font-size: 24px;
+	text-align: center;
+	line-height: 27px;
+	color: var(--main-text-color);
 }
 
 .app {
@@ -99,14 +124,6 @@ header {
 	align-items: center;
 }
 
-h1 {
-	font-family: var(--font-family);
-	font-weight: var(--font-weight-nornal);
-	font-size: 30px;
-	line-height: 33px;
-	color: var(--main-text-color);
-}
-
 .progress {
 	display: flex;
 	flex-direction: column;
@@ -132,7 +149,7 @@ h1 {
 	font-weight: var(--font-weight-nornal);
 	font-size: 12px;
 	line-height: 13px;
-	color: #768396;
+	color: var(--grey-for-text);
 }
 
 .progress__bar {
@@ -144,7 +161,7 @@ h1 {
 }
 .progress__cover-bar {
 	position: absolute;
-	width: 80%;
+	transition: all 0.5s;
 	border-radius: 4px;
 	height: 5px;
 	background: var(--primary-blue);
@@ -211,6 +228,10 @@ input::placeholder {
 	color: #8899a8;
 }
 
+input.error {
+	border: 1px solid red;
+}
+
 .habbit__form {
 	display: flex;
 	gap: 15px;
@@ -231,6 +252,7 @@ input::placeholder {
 
 .button {
 	border-radius: 9px;
+	font-family: var(--font-family);
 	border: none;
 	background: #edecfe;
 	font-weight: 500;
@@ -243,4 +265,106 @@ input::placeholder {
 
 .button:hover {
 	background: #dcdaff;
+}
+
+.button_delete {
+	background: #feecf4;
+	color: #f95080;
+}
+
+.button_delete:hover {
+	background: #ffdaeb;
+}
+
+.cover {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cover_hidden {
+	display: none;
+}
+
+.popup {
+	border-radius: 10px;
+	max-width: 600px;
+	width: 100%;
+	box-shadow: 0 8px 14px 12px rgba(56, 56, 56, 0.05);
+	background: var(--white-color);
+	padding: 22px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.popup__close {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.icon-label {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--grey-for-text);
+	margin-bottom: 10px;
+}
+
+.icon-select {
+	display: flex;
+	gap: 25px;
+	margin-bottom: 20px;
+}
+
+.icon {
+	border: 1px solid var(--primary-blue);
+	border-radius: 14px;
+	background: var(--white-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+}
+
+.icon:hover {
+	background: var(--secondary-blue);
+}
+
+.icon:hover img {
+	filter: brightness(0) invert(1);
+}
+
+.icon_active {
+	background: var(--primary-blue);
+}
+
+.icon_active img {
+	filter: brightness(0) invert(1);
+}
+
+.popup__form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.popup__form input {
+	width: 100%;
 }

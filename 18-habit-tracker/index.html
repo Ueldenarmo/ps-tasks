@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Habbit App</title>
+		<link rel="shortcut icon" href="./assets/Logo.ico" type="image/x-icon" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -36,11 +37,29 @@
 							<div class="progress__cover-bar"></div>
 						</div>
 					</div>
-					<button class="button button_delete" type="button" onclick="deleteHabbit()">
+					<button
+						class="button button_delete"
+						type="button"
+						onclick="deleteHabbit()"
+						id="delete-habbit-button"
+					>
 						Удалить привычку
 					</button>
 				</header>
 				<main>
+					<div id="empty-state" class="empty-state cover_hidden">
+						<h2 class="empty-state__title">Привычек пока нет (｡•́︿•̀｡)</h2>
+						<p class="empty-state__text">
+							Добавьте первую привычку, чтобы становиться лучше каждый день &darr;
+						</p>
+						<button
+							class="button button_add-first"
+							type="button"
+							onclick="togglePopup()"
+						>
+							Добавить привычку
+						</button>
+					</div>
 					<div id="days"></div>
 					<div class="habbit">
 						<div class="habbit__day">День _</div>
@@ -79,7 +98,7 @@
 					<form class="popup__form" onsubmit="addHabbit(event)">
 						<input type="text" name="name" placeholder="Название" />
 						<input type="text" name="icon" hidden placeholder="Иконка" value="sport" />
-						<input type="number" name="target" placeholder="Цель" />
+						<input type="number" name="target" placeholder="Цель (количество дней)" />
 						<button class="button" type="submit">Добавить</button>
 					</form>
 					<button class="popup__close" onclick="togglePopup()">

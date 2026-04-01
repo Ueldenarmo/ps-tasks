@@ -22,6 +22,10 @@ input::-webkit-inner-spin-button {
 	box-sizing: border-box;
 }
 
+p {
+	margin-top: 0;
+}
+
 body {
 	font-family: var(--font-family);
 	margin: 0;
@@ -46,6 +50,29 @@ h2 {
 	color: var(--main-text-color);
 }
 
+.empty-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 20px 60px 20px;
+	margin: 40px auto 0;
+	max-width: 520px;
+	min-height: 300px;
+}
+
+.empty-state__title {
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+.empty-state__text {
+	margin-bottom: 20px;
+	color: var(--grey-for-text);
+	line-height: 1.5;
+}
+
 .app {
 	display: flex;
 }
@@ -65,6 +92,10 @@ h2 {
 	flex-direction: column;
 	gap: 25px;
 	align-items: center;
+}
+
+.menu__list:empty {
+	display: none;
 }
 
 .menu__list {
@@ -198,18 +229,35 @@ main {
 	color: #23235f;
 }
 
+.habbit__edit-button,
 .habbit__delete {
-	margin-left: auto;
-	margin-right: 10px;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: none;
 	border: none;
 	cursor: pointer;
-	border-radius: none;
-	padding: 2px;
+	border-radius: 6px;
+	flex-shrink: 0;
 }
 
+.habbit__edit-button:hover,
 .habbit__delete:hover {
 	background: var(--light-hover-color);
+}
+
+.habbit__edit-button img,
+.habbit__delete img {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+
+.button_comment-action {
+	max-height: 53px;
 }
 
 input {
@@ -230,6 +278,7 @@ input::placeholder {
 
 input.error {
 	border: 1px solid red;
+	transition: 0.5s;
 }
 
 .habbit__form {
@@ -367,4 +416,25 @@ input.error {
 
 .popup__form input {
 	width: 100%;
+}
+
+.habbit__edit {
+	flex: 1;
+	padding: 10px 15px;
+}
+
+.habbit__edit-input {
+	width: 100%;
+}
+
+.habbit__edit-button:hover {
+	text-decoration: underline;
+}
+
+.habbit__actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-left: auto;
+	margin-right: 10px;
 }

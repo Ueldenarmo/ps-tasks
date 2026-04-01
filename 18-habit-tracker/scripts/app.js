@@ -3,6 +3,7 @@
 let habbits = [];
 const HABBIT_KEY = "HABBIT_KEY";
 let globalActiveHabbitId;
+let editingDayIndex = null;
 
 // page
 const page = {
@@ -11,10 +12,13 @@ const page = {
 		h1: document.querySelector(".h1"),
 		progressPercent: document.querySelector(".progress__percent"),
 		progressCoverBar: document.querySelector(".progress__cover-bar"),
+		deleteButton: document.getElementById("delete-habbit-button"),
 	},
 	content: {
 		daysContainer: document.getElementById("days"),
 		nextDay: document.querySelector(".habbit__day"),
+		emptyState: document.getElementById("empty-state"),
+		habitForm: document.querySelector("main .habbit"),
 	},
 	popup: {
 		index: document.getElementById("add-habbit_popup"),
@@ -25,6 +29,11 @@ const page = {
 // utils
 function loadData() {
 	const habbitsString = localStorage.getItem(HABBIT_KEY);
+	if (!habbitsString) {
+		habbits = [];
+		return;
+	}
+
 	const habbitArray = JSON.parse(habbitsString);
 	if (Array.isArray(habbitArray)) {
 		habbits = habbitArray;
@@ -57,6 +66,7 @@ function validateAndGetFormData(form, fields) {
 		form[field].classList.remove("error");
 		if (!fieldValue) {
 			form[field].classList.add("error");
+			return;
 		}
 		res[field] = fieldValue;
 	}
@@ -80,7 +90,7 @@ function rerenderMenu(activeHabbit) {
 		const element = document.createElement("button");
 		element.setAttribute("menu-habbit-id", habbit.id);
 		element.classList.add("menu__item");
-		element.addEventListener("click", () => rerender(habbit.id));
+		element.addEventListener("click", () => setActiveHabbit(habbit.id));
 		element.innerHTML = `<img src="./assets/${habbit.icon}.svg" alt="${habbit.name}" />`;
 
 		if (activeHabbit.id === habbit.id) {
@@ -104,17 +114,69 @@ function rerenderHead(activeHabbit) {
 // render body with days amd content
 function rerenderContent(activeHabbit) {
 	page.content.daysContainer.innerHTML = "";
+
 	for (const index in activeHabbit.days) {
 		const element = document.createElement("div");
 		element.classList.add("habbit");
-		element.innerHTML = `<div class="habbit__day">День ${Number(index) + 1}</div>
-            <div class="habbit__comment">${activeHabbit.days[index].comment}</div>
-            <button class="habbit__delete" onclick="deleteDay(${index})">
-                <img src="./assets/delete.svg" alt="Удалить день ${Number(index) + 1}" />
-            </button>`;
+
+		if (Number(index) === editingDayIndex) {
+			element.innerHTML = `
+				<div class="habbit__day">День ${Number(index) + 1}</div>
+				<div class="habbit__edit">
+					<input
+						id="edit-comment-${index}"
+						class="habbit__edit-input"
+						type="text"
+						value="${activeHabbit.days[index].comment}"
+						placeholder="Комментарий"
+					/>
+				</div>
+				<div class="habbit__actions">
+					<button class="button button_comment-action" type="button" onclick="saveEditDay(${index})">
+						Сохранить
+					</button>
+					<button class="button button_comment-action" type="button" onclick="cancelEditDay()">
+						Отмена
+					</button>
+				</div>
+			`;
+		} else {
+			element.innerHTML = `
+				<div class="habbit__day">День ${Number(index) + 1}</div>
+				<div class="habbit__comment">${activeHabbit.days[index].comment}</div>
+				<div class="habbit__actions">
+					<button class="habbit__edit-button" type="button" onclick="startEditDay(${index})">
+						<img src="./assets/edit.svg" alt="Редактировать день ${Number(index) + 1}" />
+					</button>
+					<button class="habbit__delete" type="button" onclick="deleteDay(${index})">
+						<img src="./assets/delete.svg" alt="Удалить день ${Number(index) + 1}" />
+					</button>
+				</div>
+			`;
+		}
+
 		page.content.daysContainer.appendChild(element);
 	}
+
 	page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
+}
+
+// render empty state (first habbit or deleted all habbits)
+function renderEmptyState() {
+	page.menu.innerHTML = "";
+	page.header.h1.innerText = "Название будущей привычки";
+	page.header.progressPercent.innerText = "0%";
+	page.header.progressCoverBar.style.width = "0%";
+	page.header.deleteButton.classList.add("cover_hidden");
+
+	page.content.daysContainer.innerHTML = "";
+	page.content.nextDay.innerText = "День 1";
+
+	page.content.emptyState.classList.remove("cover_hidden");
+	page.content.habitForm.classList.add("cover_hidden");
+
+	globalActiveHabbitId = undefined;
+	history.replaceState(null, "", document.location.pathname);
 }
 
 //all render
@@ -122,9 +184,15 @@ function rerender(activeHabbitId) {
 	globalActiveHabbitId = activeHabbitId;
 	const activeHabbit = habbits.find((habbit) => habbit.id === activeHabbitId);
 	if (!activeHabbit) {
+		renderEmptyState();
 		return;
 	}
-	document.location.replace(document.location.pathname + "#" + activeHabbitId);
+	history.replaceState(null, "", document.location.pathname + "#" + activeHabbitId);
+
+	page.header.deleteButton.classList.remove("cover_hidden");
+	page.content.emptyState.classList.add("cover_hidden");
+	page.content.habitForm.classList.remove("cover_hidden");
+
 	rerenderMenu(activeHabbit);
 	rerenderHead(activeHabbit);
 	rerenderContent(activeHabbit);
@@ -165,6 +233,60 @@ function deleteDay(index) {
 	});
 	rerender(globalActiveHabbitId);
 	saveData();
+}
+
+// edit comments
+function startEditDay(index) {
+	editingDayIndex = index;
+	rerender(globalActiveHabbitId);
+}
+
+function cancelEditDay() {
+	editingDayIndex = null;
+	rerender(globalActiveHabbitId);
+}
+
+function saveEditDay(index) {
+	const editInput = document.getElementById(`edit-comment-${index}`);
+	if (!editInput) {
+		return;
+	}
+
+	const newComment = editInput.value.trim();
+	if (!newComment) {
+		editInput.classList.add("error");
+		return;
+	}
+
+	habbits = habbits.map((habbit) => {
+		if (habbit.id === globalActiveHabbitId) {
+			const newDays = habbit.days.map((day, dayIndex) => {
+				if (dayIndex === index) {
+					return {
+						...day,
+						comment: newComment,
+					};
+				}
+				return day;
+			});
+
+			return {
+				...habbit,
+				days: newDays,
+			};
+		}
+
+		return habbit;
+	});
+
+	editingDayIndex = null;
+	saveData();
+	rerender(globalActiveHabbitId);
+}
+
+function setActiveHabbit(habbitId) {
+	editingDayIndex = null;
+	rerender(habbitId);
 }
 
 // working with habbits
@@ -208,14 +330,7 @@ function deleteHabbit() {
 	saveData();
 
 	if (habbits.length === 0) {
-		globalActiveHabbitId = undefined;
-		page.menu.innerHTML = "";
-		page.header.h1.innerText = "—";
-		page.header.progressPercent.innerText = "0%";
-		page.header.progressCoverBar.style.width = "0%";
-		page.content.daysContainer.innerHTML = "";
-		page.content.nextDay.innerText = "День 1";
-		document.location.replace(document.location.pathname);
+		renderEmptyState();
 		return;
 	}
 
@@ -227,6 +342,7 @@ function deleteHabbit() {
 	loadData();
 
 	if (habbits.length === 0) {
+		renderEmptyState();
 		return;
 	}
 

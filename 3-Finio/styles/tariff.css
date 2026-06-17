@@ -1,0 +1,116 @@
+.section_tariff {
+    margin: 80px auto;
+    display: grid;
+    gap: var(--standard-indent);
+    max-width: calc(1156px + 24px * 2);
+    padding: 0 24px;
+}
+
+.tariff__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+    gap: var(--standard-indent);
+}
+
+.tariff__card-supertitle {
+    display: inline;
+    position: relative;
+    color: var(--color-secondary);
+    padding: 4px 16px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    margin-bottom: 16px;
+}
+
+.tariff__card-supertitle_number {
+    font-weight: 800;
+}
+
+.tariff__card-supertitle .supercontent {
+    position: relative;
+    z-index: 2;
+}
+
+.tariff__card-supertitle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: calc(80% + 8px);
+    width: calc(35% + 32px);
+    border: none;
+    border-radius: var(--border-8);
+    background-color: var(--color-supertitle);
+    transform: translateY(-2px);
+}
+
+.tariff__numbers-higlithed {
+    position: relative;
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 120%;
+}
+
+.tariff__numbers-higlithed .value {
+    position: relative;
+    z-index: 2;
+}
+
+.tariff__numbers-higlithed::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: calc(100% + 16px);
+    width: calc(100% + 32px);
+    border: none;
+    border-radius: var(--border-8);
+    background-color: var(--color-highlight);
+    transform: translate(-16px, -8px);
+}
+
+.tariff__card-description_hilighted {
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+.tariff__card-highlighted {
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow-secondary);
+}
+
+.tariff__card-highlighted .tariff__card-title {
+    color: var(--color-secondary);
+}
+
+.tariff__card-highlighted .tariff__card-subtitle {
+    color: var(--color-medium-light);
+}
+
+.tariff__card-highlighted .tariff__card-description {
+    color: var(--color-secondary);
+}
+
+.tariff__card-highlighted .button {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.tariff__card-highlighted .button:hover {
+    background-color: #ebebeb;
+}
+
+.tariff__card-highlighted .tariff__card-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.tariff__card-highlighted .tariff__card-item:last-child {
+    border-bottom: none;
+}
